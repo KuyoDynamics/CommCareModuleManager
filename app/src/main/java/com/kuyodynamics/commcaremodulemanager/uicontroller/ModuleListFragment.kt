@@ -9,7 +9,7 @@ import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
-import com.kuyodynamics.commcaremodulemanager.ModuleAdaptor
+import com.kuyodynamics.commcaremodulemanager.CommCareModuleAdaptor
 import com.example.commcaremodulemanager.R
 import com.example.commcaremodulemanager.databinding.FragmentModuleListBinding
 import com.kuyodynamics.commcaremodulemanager.viewmodel.ModuleListViewModel
@@ -31,7 +31,7 @@ class ModuleListFragment : Fragment() {
     ): View? {
         // Inflate view and obtain an instance of the binding class
         binding = DataBindingUtil.inflate(inflater, R.layout.fragment_module_list, container, false)
-        val adaptor = ModuleAdaptor()
+        val adaptor = CommCareModuleAdaptor()
 //      initialize the viewModel
         Timber.i("Called ViewModelProvider.get")
         viewModel = ViewModelProvider(this)[ModuleListViewModel::class.java]

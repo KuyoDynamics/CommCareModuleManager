@@ -3,7 +3,7 @@ package com.kuyodynamics.commcaremodulemanager
 import android.app.Application
 import timber.log.Timber
 
-class ModuleManagerApplication: Application() {
+class CommCareModuleManagerApplication: Application() {
     override fun onCreate() {
         super.onCreate()
 

@@ -3,4 +3,4 @@ package com.kuyodynamics.commcaremodulemanager
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 
-class ModuleItemViewHolder(val textView: TextView): RecyclerView.ViewHolder(textView)
+class CommCareModuleViewHolder(val textView: TextView): RecyclerView.ViewHolder(textView)
