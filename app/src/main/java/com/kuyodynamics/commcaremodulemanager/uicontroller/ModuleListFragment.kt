@@ -36,7 +36,9 @@ class ModuleListFragment : Fragment() {
         Timber.i("Called ViewModelProvider.get")
         viewModel = ViewModelProvider(this)[ModuleListViewModel::class.java]
 
-        viewModel.appModule.observe(viewLifecycleOwner, Observer { newAppModule -> binding.appName})
+        viewModel.commcareApp.observe(
+            viewLifecycleOwner,
+            Observer { newCommCareApp -> binding.commcareApp = newCommCareApp })
 
         Timber.i("App Name", binding.appName.toString())
 
