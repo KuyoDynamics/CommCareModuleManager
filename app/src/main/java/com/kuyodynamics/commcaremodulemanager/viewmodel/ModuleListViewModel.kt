@@ -3,8 +3,8 @@ package com.kuyodynamics.commcaremodulemanager.viewmodel
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
-import com.kuyodynamics.commcaremodulemanager.database.CommCareApp
-import com.kuyodynamics.commcaremodulemanager.database.CommCareModule
+import com.kuyodynamics.commcaremodulemanager.database.entities.CommCareApp
+import com.kuyodynamics.commcaremodulemanager.database.entities.CommCareModule
 import timber.log.Timber
 
 class ModuleListViewModel : ViewModel() {

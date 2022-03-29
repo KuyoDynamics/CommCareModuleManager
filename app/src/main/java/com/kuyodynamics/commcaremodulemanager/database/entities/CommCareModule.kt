@@ -1,4 +1,4 @@
-package com.kuyodynamics.commcaremodulemanager.database
+package com.kuyodynamics.commcaremodulemanager.database.entities
 
 
 data class CommCareModule(

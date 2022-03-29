@@ -5,7 +5,7 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.commcaremodulemanager.R
-import com.kuyodynamics.commcaremodulemanager.database.CommCareModule
+import com.kuyodynamics.commcaremodulemanager.database.entities.CommCareModule
 
 class CommCareModuleAdaptor: RecyclerView.Adapter<CommCareModuleViewHolder>() {
     var data = listOf<CommCareModule>()

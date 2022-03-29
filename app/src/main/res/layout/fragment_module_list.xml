@@ -6,11 +6,11 @@
 
         <variable
             name="appModule"
-            type="com.kuyodynamics.commcaremodulemanager.database.CommCareModule" />
+            type="com.kuyodynamics.commcaremodulemanager.database.entities.CommCareModule" />
 
         <variable
             name="commcareApp"
-            type="com.kuyodynamics.commcaremodulemanager.database.CommCareApp" />
+            type="com.kuyodynamics.commcaremodulemanager.database.entities.CommCareApp" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
