@@ -1,4 +1,4 @@
-package com.example.commcaremodulemanager
+package com.kuyodynamics.commcaremodulemanager
 
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView

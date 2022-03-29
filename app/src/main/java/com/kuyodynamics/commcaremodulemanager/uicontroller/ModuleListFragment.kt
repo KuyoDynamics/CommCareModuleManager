@@ -1,79 +1,94 @@
-package com.example.commcaremodulemanager.uicontroller
+package com.kuyodynamics.commcaremodulemanager.uicontroller
 
 import android.content.Context
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.databinding.DataBindingUtil
+import androidx.fragment.app.Fragment
+import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
-import com.example.commcaremodulemanager.ModuleAdaptor
+import com.kuyodynamics.commcaremodulemanager.ModuleAdaptor
 import com.example.commcaremodulemanager.R
-import com.example.commcaremodulemanager.viewmodel.ModuleListViewModel
+import com.example.commcaremodulemanager.databinding.FragmentModuleListBinding
+import com.kuyodynamics.commcaremodulemanager.viewmodel.ModuleListViewModel
 import timber.log.Timber
 
 /**
  * A simple [Fragment] subclass as the default destination in the navigation.
  */
 class ModuleListFragment : Fragment() {
+    // binding
+    private lateinit var binding: FragmentModuleListBinding
 
-//    reference to the ViewModel
+    //    reference to the ViewModel
     private lateinit var viewModel: ModuleListViewModel
 
     override fun onCreateView(
-            inflater: LayoutInflater, container: ViewGroup?,
-            savedInstanceState: Bundle?
+        inflater: LayoutInflater, container: ViewGroup?,
+        savedInstanceState: Bundle?
     ): View? {
-        // Inflate the layout for this fragment
+        // Inflate view and obtain an instance of the binding class
+        binding = DataBindingUtil.inflate(inflater, R.layout.fragment_module_list, container, false)
         val adaptor = ModuleAdaptor()
 //      initialize the viewModel
-        Timber.i("ModuleListFragment", "Called ViewModelProvider.get")
+        Timber.i("Called ViewModelProvider.get")
         viewModel = ViewModelProvider(this)[ModuleListViewModel::class.java]
-        Timber.i("HomeFragment", "onCreateView called")
-        return inflater.inflate(R.layout.fragment_module_list, container, false)
+
+        viewModel.appModule.observe(viewLifecycleOwner, Observer { newAppModule -> binding.appName})
+
+        Timber.i("App Name", binding.appName.toString())
+
+        return binding.root
     }
 
-//    override fun onAttach(context: Context) {
+    //    override fun onAttach(context: Context) {
 //        super.onAttach(context)
 //        Log.i("TitleFragment", "onAttach called")
 //    }
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        Timber.i("HomeFragment", "onCreate called")
+        Timber.i("onCreate called")
     }
 
     override fun onAttach(context: Context) {
         super.onAttach(context)
-        Timber.i("HomeFragment", "onAttach called")
+        Timber.i("onAttach called")
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        Timber.i("HomeFragment", "onViewCreated called")
+        Timber.i("onViewCreated called")
     }
 
     override fun onStart() {
         super.onStart()
-        Timber.i("HomeFragment", "onStart called")
+        Timber.i("onStart called")
     }
+
     override fun onResume() {
         super.onResume()
-        Timber.i("HomeFragment", "onResume called")
+        Timber.i("onResume called")
     }
+
     override fun onPause() {
         super.onPause()
-        Timber.i("HomeFragment", "onPause called")
+        Timber.i("onPause called")
     }
+
     override fun onStop() {
         super.onStop()
-        Timber.i("HomeFragment", "onStop called")
+        Timber.i("onStop called")
     }
+
     override fun onDestroyView() {
         super.onDestroyView()
-        Timber.i("HomeFragment", "onDestroyView called")
+        Timber.i("onDestroyView called")
     }
+
     override fun onDetach() {
         super.onDetach()
-        Timber.i("HomeFragment", "onDetach called")
+        Timber.i("onDetach called")
     }
 }
