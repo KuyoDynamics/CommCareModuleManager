@@ -1,5 +1,6 @@
 package com.kuyodynamics.commcaremodulemanager.viewmodel
 
+import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import com.kuyodynamics.commcaremodulemanager.database.CommCareApp
@@ -8,14 +9,23 @@ import timber.log.Timber
 
 class ModuleListViewModel : ViewModel() {
 
-    val appModule = MutableLiveData<CommCareModule?>()
-    val appModuleList = mutableListOf<CommCareModule?>()
-    val commcareApp = MutableLiveData<CommCareApp?>()
+    private val _appModule = MutableLiveData<CommCareModule?>()
+    val appModule: LiveData<CommCareModule?>
+        get() = _appModule
+
+    private val _appModuleList = MutableLiveData<MutableList<CommCareModule>>()
+    val appModuleList: LiveData<MutableList<CommCareModule>>
+        get() = _appModuleList
+
+    private val _commcareApp = MutableLiveData<CommCareApp?>()
+    val commCareApp: LiveData<CommCareApp?>
+        get() = _commcareApp
+
     init {
 //        Reset the list here
         Timber.i("ModuleListViewModel created!")
 //        initialize appModule
-        appModule.value =null
+//        _appModule.value = null
 //        appModuleList.value = null
     }
 
