@@ -36,11 +36,20 @@ class ModuleListFragment : Fragment() {
         Timber.i("Called ViewModelProvider.get")
         viewModel = ViewModelProvider(this)[ModuleListViewModel::class.java]
 
-        viewModel.commcareApp.observe(
+//        Should I do this type of thing instead?
+//        binding.commcareApp = viewModel.commCareApp
+//        And connect the event listeners in the xaml as:
+//        <Button
+//              android:id="@+id/play_again_button"
+//              ...
+//              android:onClick="@{() -> scoreViewModel.onPlayAgain()}"
+//         ... />
+        binding.lifecycleOwner = viewLifecycleOwner
+        viewModel.commCareApp.observe(
             viewLifecycleOwner,
             Observer { newCommCareApp -> binding.commcareApp = newCommCareApp })
 
-        Timber.i("App Name", binding.appName.toString())
+        Timber.i("App Name", binding.commcareApp.name)
 
         return binding.root
     }
