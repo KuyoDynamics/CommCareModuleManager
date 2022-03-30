@@ -2,11 +2,12 @@ package com.kuyodynamics.commcaremodulemanager.database.dao
 
 import androidx.lifecycle.LiveData
 import androidx.room.*
+import androidx.room.OnConflictStrategy.Companion.REPLACE
 import com.kuyodynamics.commcaremodulemanager.database.entities.CommCareApp
 
 @Dao
 interface CommCareAppDAO {
-    @Insert
+    @Insert(onConflict = REPLACE)
     fun insert(commcareApp: CommCareApp)
 
     @Update
