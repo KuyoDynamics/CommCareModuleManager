@@ -49,7 +49,7 @@ class ModuleListFragment : Fragment() {
             viewLifecycleOwner,
             Observer { newCommCareApp -> binding.commcareApp = newCommCareApp })
 
-        Timber.i("App Name", binding.commcareApp.name)
+        Timber.i("App Name", binding.commcareApp?.name)
 
         return binding.root
     }
