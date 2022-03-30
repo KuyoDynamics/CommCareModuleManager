@@ -18,6 +18,9 @@ import androidx.room.PrimaryKey
 )
 data class SurveyManagerTable(
     @PrimaryKey()
+    @ColumnInfo(name = "id")
+    var id: String,
+
     @ColumnInfo(name = "survey")
     var survey: String,
 
