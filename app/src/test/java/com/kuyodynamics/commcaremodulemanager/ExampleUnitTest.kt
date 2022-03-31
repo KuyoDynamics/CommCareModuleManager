@@ -1,4 +1,4 @@
-package com.example.commcaremodulemanager
+package com.kuyodynamics.commcaremodulemanager
 
 import org.junit.Test
 
