@@ -1,4 +1,4 @@
-package com.kuyodynamics.commcaremodulemanager
+package com.kuyodynamics.commcaresurveymanager
 
 import androidx.test.platform.app.InstrumentationRegistry
 import androidx.test.ext.junit.runners.AndroidJUnit4

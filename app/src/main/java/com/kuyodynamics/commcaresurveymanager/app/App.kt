@@ -1,9 +1,9 @@
-package com.kuyodynamics.commcaremodulemanager
+package com.kuyodynamics.commcaresurveymanager.app
 
 import android.app.Application
 import timber.log.Timber
 
-class CommCareModuleManagerApplication: Application() {
+class App: Application() {
     override fun onCreate() {
         super.onCreate()
 

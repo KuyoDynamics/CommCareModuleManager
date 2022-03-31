@@ -1,11 +1,11 @@
-package com.kuyodynamics.commcaremodulemanager.database
+package com.kuyodynamics.commcaresurveymanager.database
 
 import android.content.Context
 import androidx.room.Database
 import androidx.room.Room
 import androidx.room.RoomDatabase
-import com.kuyodynamics.commcaremodulemanager.database.dao.*
-import com.kuyodynamics.commcaremodulemanager.database.entities.*
+import com.kuyodynamics.commcaresurveymanager.database.dao.*
+import com.kuyodynamics.commcaresurveymanager.database.entities.*
 
 @Database(
     entities = [CommCareApp::class, CommCareModule::class, CommCareForm::class, CommCareQuestion::class, CommCareUser::class, SurveyManagerTable::class],

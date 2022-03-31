@@ -1,4 +1,4 @@
-package com.kuyodynamics.commcaremodulemanager.database.entities
+package com.kuyodynamics.commcaresurveymanager.database.entities
 
 import androidx.room.ColumnInfo
 import androidx.room.Entity

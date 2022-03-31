@@ -1,10 +1,10 @@
-package com.kuyodynamics.commcaremodulemanager.viewmodel
+package com.kuyodynamics.commcaresurveymanager.commcare.modules
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
-import com.kuyodynamics.commcaremodulemanager.database.entities.CommCareApp
-import com.kuyodynamics.commcaremodulemanager.database.entities.CommCareModule
+import com.kuyodynamics.commcaresurveymanager.database.entities.CommCareApp
+import com.kuyodynamics.commcaresurveymanager.database.entities.CommCareModule
 import timber.log.Timber
 
 class ModuleListViewModel : ViewModel() {

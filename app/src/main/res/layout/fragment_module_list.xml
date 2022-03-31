@@ -6,17 +6,17 @@
 
         <variable
             name="appModule"
-            type="com.kuyodynamics.commcaremodulemanager.database.entities.CommCareModule" />
+            type="com.kuyodynamics.commcaresurveymanager.database.entities.CommCareModule" />
 
         <variable
             name="commCareApp"
-            type="com.kuyodynamics.commcaremodulemanager.database.entities.CommCareApp" />
+            type="com.kuyodynamics.commcaresurveymanager.database.entities.CommCareApp" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context="com.kuyodynamics.commcaremodulemanager.uicontroller.ModuleListFragment">
+        tools:context="com.kuyodynamics.commcaresurveymanager.commcare.modules.ModuleListFragment">
 
         <LinearLayout
             android:layout_width="match_parent"

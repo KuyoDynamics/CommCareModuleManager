@@ -1,4 +1,4 @@
-package com.kuyodynamics.commcaremodulemanager.database.dao
+package com.kuyodynamics.commcaresurveymanager.database.dao
 
 import androidx.lifecycle.LiveData
 import androidx.room.Dao
@@ -6,7 +6,7 @@ import androidx.room.Insert
 import androidx.room.OnConflictStrategy.Companion.REPLACE
 import androidx.room.Query
 import androidx.room.Update
-import com.kuyodynamics.commcaremodulemanager.database.entities.CommCareModule
+import com.kuyodynamics.commcaresurveymanager.database.entities.CommCareModule
 
 @Dao
 interface CommCareModuleDAO {

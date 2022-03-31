@@ -1,4 +1,4 @@
-package com.kuyodynamics.commcaremodulemanager
+package com.kuyodynamics.commcaresurveymanager.app
 
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView

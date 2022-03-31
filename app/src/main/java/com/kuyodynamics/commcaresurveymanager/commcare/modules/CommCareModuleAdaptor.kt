@@ -1,11 +1,12 @@
-package com.kuyodynamics.commcaremodulemanager
+package com.kuyodynamics.commcaresurveymanager.commcare.modules
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.commcaremodulemanager.R
-import com.kuyodynamics.commcaremodulemanager.database.entities.CommCareModule
+import com.kuyodynamics.commcaresurveymanager.app.CommCareModuleViewHolder
+import com.kuyodynamics.commcaresurveymanager.database.entities.CommCareModule
 
 class CommCareModuleAdaptor: RecyclerView.Adapter<CommCareModuleViewHolder>() {
     var data = listOf<CommCareModule>()

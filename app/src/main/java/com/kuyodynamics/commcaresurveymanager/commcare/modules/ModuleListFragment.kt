@@ -1,4 +1,4 @@
-package com.kuyodynamics.commcaremodulemanager.uicontroller
+package com.kuyodynamics.commcaresurveymanager.commcare.modules
 
 import android.content.Context
 import android.os.Bundle
@@ -9,10 +9,8 @@ import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
-import com.kuyodynamics.commcaremodulemanager.CommCareModuleAdaptor
 import com.example.commcaremodulemanager.R
 import com.example.commcaremodulemanager.databinding.FragmentModuleListBinding
-import com.kuyodynamics.commcaremodulemanager.viewmodel.ModuleListViewModel
 import timber.log.Timber
 
 /**
@@ -47,9 +45,9 @@ class ModuleListFragment : Fragment() {
         binding.lifecycleOwner = viewLifecycleOwner
         viewModel.commCareApp.observe(
             viewLifecycleOwner,
-            Observer { newCommCareApp -> binding.commcareApp = newCommCareApp })
+            Observer { newCommCareApp -> binding.commCareApp = newCommCareApp })
 
-        Timber.i("App Name", binding.commcareApp?.name)
+        Timber.i("App Name", binding.commCareApp?.name)
 
         return binding.root
     }
