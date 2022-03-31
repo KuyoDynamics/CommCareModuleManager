@@ -16,7 +16,6 @@ import android.widget.EditText
 import android.widget.ProgressBar
 import android.widget.Toast
 import com.kuyodynamics.commcaresurveymanager.R
-//import com.kuyodynamics.commcaresurveymanager.app.auth.R
 import com.kuyodynamics.commcaresurveymanager.databinding.FragmentLoginBinding
 
 class LoginFragment : Fragment() {
@@ -42,8 +41,7 @@ class LoginFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        loginViewModel = ViewModelProvider(this, LoginViewModelFactory())
-            .get(LoginViewModel::class.java)
+        loginViewModel = ViewModelProvider(this, LoginViewModelFactory())[LoginViewModel::class.java]
 
         val usernameEditText = binding.username
         val passwordEditText = binding.password
