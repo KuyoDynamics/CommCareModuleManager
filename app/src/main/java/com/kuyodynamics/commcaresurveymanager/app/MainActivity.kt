@@ -5,7 +5,7 @@ import timber.log.Timber
 import androidx.appcompat.app.AppCompatActivity
 import android.view.Menu
 import android.view.MenuItem
-import com.example.commcaremodulemanager.R
+import com.kuyodynamics.commcaresurveymanager.R
 
 class MainActivity : AppCompatActivity() {
 
@@ -28,7 +28,7 @@ class MainActivity : AppCompatActivity() {
         // automatically handle clicks on the Home/Up button, so long
         // as you specify a parent activity in AndroidManifest.xml.
         return when (item.itemId) {
-            R.id.action_settings -> true
+            R.id.action_logout -> true
             else -> super.onOptionsItemSelected(item)
         }
     }

@@ -4,11 +4,11 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
-import com.example.commcaremodulemanager.R
+import com.kuyodynamics.commcaresurveymanager.R
 import com.kuyodynamics.commcaresurveymanager.app.CommCareModuleViewHolder
 import com.kuyodynamics.commcaresurveymanager.database.entities.CommCareModule
 
-class CommCareModuleAdaptor: RecyclerView.Adapter<CommCareModuleViewHolder>() {
+class ModuleListAdaptor: RecyclerView.Adapter<CommCareModuleViewHolder>() {
     var data = listOf<CommCareModule>()
         set(value) {
             field = value
