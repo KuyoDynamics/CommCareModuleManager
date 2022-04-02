@@ -7,6 +7,19 @@ import com.kuyodynamics.commcaresurveymanager.database.entities.CommCareApp
 import com.kuyodynamics.commcaresurveymanager.database.entities.CommCareModule
 import timber.log.Timber
 
+// This is the state that the recyclerView adaptor will call
+data class ModuleItemUiState(
+    val moduleId: String,
+    val appId: String,
+    val name: String,
+    val caseType: String,
+    val caseProperties: List<String>,
+    val onToggleModule: () -> Unit,
+    val onWindowChange: () -> Unit,
+    val onSave: () -> Unit,
+    val onView: () -> Unit
+)
+
 class ModuleListViewModel : ViewModel() {
 
     private val _appModule = MutableLiveData<CommCareModule?>()
