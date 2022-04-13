@@ -1,4 +1,4 @@
-package com.kuyodynamics.commcaresurveymanager.app.auth.ui.login
+package com.kuyodynamics.commcaresurveymanager.core.auth.ui.login
 
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider

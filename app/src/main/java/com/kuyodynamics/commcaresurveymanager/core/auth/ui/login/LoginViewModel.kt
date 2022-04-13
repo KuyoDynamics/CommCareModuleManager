@@ -1,12 +1,12 @@
-package com.kuyodynamics.commcaresurveymanager.app.auth.ui.login
+package com.kuyodynamics.commcaresurveymanager.core.auth.ui.login
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import android.util.Patterns
 import com.kuyodynamics.commcaresurveymanager.R
-import com.kuyodynamics.commcaresurveymanager.app.auth.data.LoginRepository
-import com.kuyodynamics.commcaresurveymanager.app.auth.data.Result
+import com.kuyodynamics.commcaresurveymanager.core.auth.data.LoginRepository
+import com.kuyodynamics.commcaresurveymanager.core.auth.data.Result
 
 class LoginViewModel(private val loginRepository: LoginRepository) : ViewModel() {
 

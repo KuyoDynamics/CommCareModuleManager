@@ -1,4 +1,4 @@
-package com.kuyodynamics.commcaresurveymanager.app.auth.data
+package com.kuyodynamics.commcaresurveymanager.core.auth.data
 
 /**
  * A generic class that holds a value with its loading status.

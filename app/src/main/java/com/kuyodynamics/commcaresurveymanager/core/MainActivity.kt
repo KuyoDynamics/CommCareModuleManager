@@ -1,4 +1,4 @@
-package com.kuyodynamics.commcaresurveymanager.app
+package com.kuyodynamics.commcaresurveymanager.core
 
 import android.os.Bundle
 import timber.log.Timber

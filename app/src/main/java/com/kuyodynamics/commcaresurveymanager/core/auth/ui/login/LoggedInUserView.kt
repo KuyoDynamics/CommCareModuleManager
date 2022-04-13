@@ -1,4 +1,4 @@
-package com.kuyodynamics.commcaresurveymanager.app.auth.ui.login
+package com.kuyodynamics.commcaresurveymanager.core.auth.ui.login
 
 /**
  * User details post authentication that is exposed to the UI

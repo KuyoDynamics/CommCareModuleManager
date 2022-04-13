@@ -5,7 +5,7 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.kuyodynamics.commcaresurveymanager.R
-import com.kuyodynamics.commcaresurveymanager.app.CommCareModuleViewHolder
+import com.kuyodynamics.commcaresurveymanager.core.CommCareModuleViewHolder
 import com.kuyodynamics.commcaresurveymanager.database.entities.CommCareModule
 
 class ModuleListAdaptor: RecyclerView.Adapter<CommCareModuleViewHolder>() {

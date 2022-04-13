@@ -1,4 +1,4 @@
-package com.kuyodynamics.commcaresurveymanager.app.auth.ui.login
+package com.kuyodynamics.commcaresurveymanager.core.auth.ui.login
 
 /**
  * Authentication result : success (user details) or error message.

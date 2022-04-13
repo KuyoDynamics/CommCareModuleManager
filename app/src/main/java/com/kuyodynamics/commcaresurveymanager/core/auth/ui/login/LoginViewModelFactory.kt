@@ -1,9 +1,9 @@
-package com.kuyodynamics.commcaresurveymanager.app.auth.ui.login
+package com.kuyodynamics.commcaresurveymanager.core.auth.ui.login
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
-import com.kuyodynamics.commcaresurveymanager.app.auth.data.LoginDataSource
-import com.kuyodynamics.commcaresurveymanager.app.auth.data.LoginRepository
+import com.kuyodynamics.commcaresurveymanager.core.auth.data.LoginDataSource
+import com.kuyodynamics.commcaresurveymanager.core.auth.data.LoginRepository
 
 /**
  * ViewModel provider factory to instantiate LoginViewModel.

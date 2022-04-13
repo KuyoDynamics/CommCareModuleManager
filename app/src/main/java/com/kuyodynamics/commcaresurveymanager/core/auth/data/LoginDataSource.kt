@@ -1,6 +1,6 @@
-package com.kuyodynamics.commcaresurveymanager.app.auth.data
+package com.kuyodynamics.commcaresurveymanager.core.auth.data
 
-import com.kuyodynamics.commcaresurveymanager.app.auth.data.model.LoggedInUser
+import com.kuyodynamics.commcaresurveymanager.core.auth.data.model.LoggedInUser
 import java.io.IOException
 
 /**
