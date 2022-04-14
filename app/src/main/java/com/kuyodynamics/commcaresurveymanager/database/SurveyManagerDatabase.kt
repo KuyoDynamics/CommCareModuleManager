@@ -12,7 +12,7 @@ import com.kuyodynamics.commcaresurveymanager.database.entities.*
     version = 1,
     exportSchema = false
 )
-abstract class ModuleManagerDatabase : RoomDatabase() {
+abstract class SurveyManagerDatabase : RoomDatabase() {
 
     // refs to DAOs
     abstract val commCareAppDAO: CommCareAppDAO
@@ -26,9 +26,9 @@ abstract class ModuleManagerDatabase : RoomDatabase() {
     companion object {
 
         @Volatile
-        private var INSTANCE: ModuleManagerDatabase? = null
+        private var INSTANCE: SurveyManagerDatabase? = null
 
-        fun getInstance(context: Context): ModuleManagerDatabase {
+        fun getInstance(context: Context): SurveyManagerDatabase {
             synchronized(this) {
                 // Kotlin smart cast feature
                 var instance = INSTANCE
@@ -36,7 +36,7 @@ abstract class ModuleManagerDatabase : RoomDatabase() {
                 if (instance == null) {
                     instance = Room.databaseBuilder(
                         context.applicationContext,
-                        ModuleManagerDatabase::class.java,
+                        SurveyManagerDatabase::class.java,
                         "module_manager_database"
                     ).fallbackToDestructiveMigration().build()
                     INSTANCE = instance
