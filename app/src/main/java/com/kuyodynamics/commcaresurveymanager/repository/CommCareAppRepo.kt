@@ -2,13 +2,10 @@ package com.kuyodynamics.commcaresurveymanager.repository
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.Transformations
-import androidx.lifecycle.map
 import com.kuyodynamics.commcaresurveymanager.database.SurveyManagerDatabase
-import com.kuyodynamics.commcaresurveymanager.database.entities.CommCareApp
 import com.kuyodynamics.commcaresurveymanager.database.entities.asDomainModelList
 import com.kuyodynamics.commcaresurveymanager.domain.App
 import com.kuyodynamics.commcaresurveymanager.network.CommCareNetwork
-import com.kuyodynamics.commcaresurveymanager.network.CommCareService
 import com.kuyodynamics.commcaresurveymanager.network.asDatabaseModelList
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
