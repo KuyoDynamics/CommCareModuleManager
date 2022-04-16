@@ -3,6 +3,7 @@ package com.kuyodynamics.commcaresurveymanager.database.entities
 import androidx.room.ColumnInfo
 import androidx.room.Entity
 import androidx.room.PrimaryKey
+import com.kuyodynamics.commcaresurveymanager.domain.App
 import java.util.*
 
 @Entity(tableName = "commcare_app")
@@ -26,3 +27,19 @@ data class CommCareApp(
     @ColumnInfo(name = "version")
     var version: Int
 )
+
+/**
+ * Map CommCareApps to domain entities
+ */
+fun List<CommCareApp>.asDomainModelList(): List<App>{
+    return map{
+        App(
+            appId = it.appId,
+            name = it.name,
+            buildComment = it.buildComment,
+            builtOn = it.builtOn,
+            isReleased = it.isReleased,
+            version = it.version
+        )
+    }
+}

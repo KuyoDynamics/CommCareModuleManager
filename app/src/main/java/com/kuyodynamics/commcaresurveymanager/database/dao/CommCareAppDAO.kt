@@ -4,6 +4,7 @@ import androidx.lifecycle.LiveData
 import androidx.room.*
 import androidx.room.OnConflictStrategy.Companion.REPLACE
 import com.kuyodynamics.commcaresurveymanager.database.entities.CommCareApp
+import com.kuyodynamics.commcaresurveymanager.domain.App
 
 @Dao
 interface CommCareAppDAO {

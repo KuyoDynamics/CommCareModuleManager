@@ -2,6 +2,7 @@ package com.kuyodynamics.commcaresurveymanager.network
 
 import androidx.room.ColumnInfo
 import com.kuyodynamics.commcaresurveymanager.database.entities.CommCareApp
+import com.kuyodynamics.commcaresurveymanager.domain.App
 import com.squareup.moshi.JsonClass
 import java.util.*
 
@@ -59,10 +60,11 @@ data class NetworkCommCareApp(
     val version: Int,
     val versions: List<Any>
 )
+
 /**
- * Convert Network results to database objects via Extesnion function
+ * Convert Network results to database objects via Extension function
  */
-fun NetworkCommCareAppContainer.asDatabaseModel(): List<CommCareApp> {
+fun NetworkCommCareAppContainer.asDatabaseModelList(): List<CommCareApp> {
     return apps.objects.map {
         CommCareApp(
             appId = it.id,
