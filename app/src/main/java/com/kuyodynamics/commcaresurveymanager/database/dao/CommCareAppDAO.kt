@@ -10,6 +10,9 @@ interface CommCareAppDAO {
     @Insert(onConflict = REPLACE)
     fun insert(commcareApp: CommCareApp)
 
+    @Insert(onConflict = REPLACE)
+    fun insertAll(commcareApps: List<CommCareApp>)
+
     @Update
     fun update(commcareApp: CommCareApp)
 
