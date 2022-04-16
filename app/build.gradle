@@ -102,6 +102,10 @@ dependencies {
     implementation "org.jetbrains.kotlinx:kotlinx-coroutines-core:$coroutines_version"
     // android coroutines library
     implementation "org.jetbrains.kotlinx:kotlinx-coroutines-android:$coroutines_version"
+    // retrofit
+    implementation "com.squareup.retrofit2:retrofit:2.9.0"
+    // mosh
+    implementation "com.squareup.moshi:moshi-kotlin:1.13.0"
     // optional - Test helpers
     testImplementation "androidx.room:room-testing:$room_version"
     // optional - Test helpers for LiveData
