@@ -9,7 +9,7 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.CommCareModuleManager">
+        android:theme="@style/Theme.CommCareSurveyManager">
         <activity
             android:name="com.kuyodynamics.commcaresurveymanager.core.MainActivity"
             android:theme="@style/Theme.CommCareModuleManager.NoActionBar"
