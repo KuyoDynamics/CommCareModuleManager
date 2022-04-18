@@ -31,7 +31,7 @@ interface CommCareService {
 }
 
 /**
- * Main entry point for network access. Call like `CommCareNetwork.apps.getApps
+ * Main entry point for network access. Call like `CommCareNetwork.api.getApps
  */
 object CommCareNetwork {
     // Configure retrofit to parse JSON and use coroutines

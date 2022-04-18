@@ -28,6 +28,9 @@
     <string name="selected_project">Selected Project</string>
     <string name="app_details_label">App Details will be shown here</string>
     <string name="app_name_sample">Sample App Name</string>
+    <string name="built_on">built on</string>
+    <string name="build_comment">build comment</string>
+    <string name="version">version</string>
     <!-- Sample App Names   -->
     <string-array name="app_names">
         <item>MIRA-RFMS FINAL</item>
