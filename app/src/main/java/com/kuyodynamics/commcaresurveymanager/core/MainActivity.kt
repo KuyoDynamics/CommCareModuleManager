@@ -5,16 +5,47 @@ import timber.log.Timber
 import androidx.appcompat.app.AppCompatActivity
 import android.view.Menu
 import android.view.MenuItem
+import android.view.View
+import android.widget.AdapterView
+import android.widget.ArrayAdapter
+import android.widget.Spinner
 import com.kuyodynamics.commcaresurveymanager.R
 
-class MainActivity : AppCompatActivity() {
+class MainActivity : AppCompatActivity(), AdapterView.OnItemSelectedListener {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         setSupportActionBar(findViewById(R.id.toolbar))
-        Timber.i("MainActivity", "onCreate Called")
 
+        // setting up apps and project spinners
+        val apps_spinner: Spinner = findViewById(R.id.app_spinner)
+        val projects_spinner: Spinner = findViewById(R.id.project_spinner)
+        // Create an ArrayAdapter using the string array and a default spinner layout
+
+        // 1. Project Spinner
+        ArrayAdapter.createFromResource(
+            this,
+            R.array.project_names,
+            android.R.layout.simple_spinner_item
+        ).also { adapter ->
+            // Specify the layout to use when the list of choices appears
+            adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
+            // Apply the adapter to the spinner
+            projects_spinner.adapter = adapter
+        }
+
+        // 2. App Spinner
+        ArrayAdapter.createFromResource(
+            this,
+            R.array.app_names,
+            android.R.layout.simple_spinner_item
+        ).also { adapter ->
+            // Specify the layout to use when the list of choices appears
+            adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
+            // Apply the adapter to the spinner
+            apps_spinner.adapter = adapter
+        }
     }
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
@@ -33,33 +64,11 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
-    override fun onStart(){
-        super.onStart()
-        Timber.i("onStart called!")
+    override fun onItemSelected(parent: AdapterView<*>?, view: View?, position: Int, id: Long) {
+        TODO("Not yet implemented")
     }
 
-    override fun onResume() {
-        super.onResume()
-        Timber.i("onResume Called")
-    }
-
-    override fun onPause() {
-        super.onPause()
-        Timber.i("onPause Called")
-    }
-
-    override fun onStop() {
-        super.onStop()
-        Timber.i("onStop Called")
-    }
-
-    override fun onDestroy() {
-        super.onDestroy()
-        Timber.i("onDestroy Called")
-    }
-
-    override fun onRestart() {
-        super.onRestart()
-        Timber.i("onRestart Called")
+    override fun onNothingSelected(parent: AdapterView<*>?) {
+        TODO("Not yet implemented")
     }
 }

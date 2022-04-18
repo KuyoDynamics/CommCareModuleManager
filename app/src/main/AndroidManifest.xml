@@ -12,7 +12,7 @@
         android:theme="@style/Theme.CommCareSurveyManager">
         <activity
             android:name="com.kuyodynamics.commcaresurveymanager.core.MainActivity"
-            android:theme="@style/Theme.CommCareModuleManager.NoActionBar"
+            android:theme="@style/Theme.CommCareSurveyManager.NoActionBar"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

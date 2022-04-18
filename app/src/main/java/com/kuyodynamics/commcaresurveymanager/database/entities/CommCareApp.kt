@@ -2,15 +2,26 @@ package com.kuyodynamics.commcaresurveymanager.database.entities
 
 import androidx.room.ColumnInfo
 import androidx.room.Entity
+import androidx.room.ForeignKey
+import androidx.room.ForeignKey.Companion.CASCADE
 import androidx.room.PrimaryKey
 import com.kuyodynamics.commcaresurveymanager.domain.App
 import java.util.*
 
-@Entity(tableName = "commcare_app")
+@Entity(tableName = "commcare_app", foreignKeys = [
+    ForeignKey(
+        entity = CommCareProject::class,
+        parentColumns = ["projectDomain"],
+        childColumns = ["projectDomain"],
+        onDelete = CASCADE
+    )
+])
 data class CommCareApp(
     @PrimaryKey()
     @ColumnInfo(name = "app_id")
     var appId: String,
+
+    var projectDomain: String,
 
     @ColumnInfo(name = "name")
     var name: String,
@@ -29,7 +40,7 @@ data class CommCareApp(
 )
 
 /**
- * Map CommCareApps to domain entities
+ * [Extension Function] Map CommCareApps to domain entities
  */
 fun List<CommCareApp>.asDomainModelList(): List<App>{
     return map{

@@ -8,7 +8,15 @@ import com.kuyodynamics.commcaresurveymanager.database.dao.*
 import com.kuyodynamics.commcaresurveymanager.database.entities.*
 
 @Database(
-    entities = [CommCareApp::class, CommCareModule::class, CommCareForm::class, CommCareQuestion::class, CommCareUser::class, SurveyManagerTable::class],
+    entities = [
+        CommCareUser::class,
+        CommCareProject::class,
+        CommCareApp::class,
+        CommCareModule::class,
+        CommCareForm::class,
+        CommCareQuestion::class,
+        SurveyManagerTable::class
+    ],
     version = 1,
     exportSchema = false
 )
@@ -21,6 +29,7 @@ abstract class SurveyManagerDatabase : RoomDatabase() {
     abstract val commCareQuestionDAO: CommCareQuestionDAO
     abstract val commCareUserDAO: CommCareUserDAO
     abstract val surveyManagerTableDAO: SurveyManagerTableDAO
+    abstract val commCareProjectDAO: CommCareProjectDAO
 
     // The companion object allows clients to access the methods for creating or getting the database without instantiating the class.
     companion object {

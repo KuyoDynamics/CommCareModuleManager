@@ -26,3 +26,11 @@ data class App(
 
     var version: Int
 )
+
+/**
+ * CommCare Project
+ */
+data class Project(
+    var domainName: String,
+    var projectName: String
+)

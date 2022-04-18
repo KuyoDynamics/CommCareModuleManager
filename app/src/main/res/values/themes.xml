@@ -19,7 +19,7 @@
         <item name="windowNoTitle">true</item>
     </style>
 
-    <style name="Theme.CommCareModuleManager.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+    <style name="Theme.CommCareSurveyManager.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
 
-    <style name="Theme.CommCareModuleManager.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+    <style name="Theme.CommCareSurveyManager.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
 </resources>

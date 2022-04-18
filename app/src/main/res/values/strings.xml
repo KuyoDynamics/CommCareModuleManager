@@ -22,4 +22,20 @@
     <string name="invalid_username">Not a valid username</string>
     <string name="invalid_password">Password must be >5 characters</string>
     <string name="login_failed">"Login failed"</string>
+    <string name="togglebutton">ToggleButton</string>
+    <string name="favourite">favourite</string>
+    <string name="selected_app">No App Selected</string>
+    <string name="selected_project">Selected Project</string>
+    <string name="app_details_label">App Details will be shown here</string>
+    <string name="app_name_sample">Sample App Name</string>
+    <!-- Sample App Names   -->
+    <string-array name="app_names">
+        <item>MIRA-RFMS FINAL</item>
+        <item>MIRA-RFMS FINAL2</item>
+    </string-array>
+    <!-- Sample Project Names   -->
+    <string-array name="project_names">
+        <item>mira-rfms</item>
+        <item>some-other-project</item>
+    </string-array>
 </resources>

@@ -18,12 +18,16 @@ interface CommCareService {
     /**
      * Get a list of CommCare Apps from the api
      */
-    @GET("{projectName}/api/v0.5/application")
+    @GET("a/{projectName}/api/v0.5/application")
     suspend fun getApps(
         @Path("projectName") projectName: String
     ): NetworkCommCareAppContainer
 
-
+    /**
+     * Get a list of CommCare Projects, a user is a part of, from the api
+     */
+    @GET("api/v0.5/user_domains/")
+    suspend fun getProjects(): NetworkCommCareProjectContainer
 }
 
 /**
@@ -31,8 +35,8 @@ interface CommCareService {
  */
 object CommCareNetwork {
     // Configure retrofit to parse JSON and use coroutines
-    private val retrofit = Retrofit.Builder().baseUrl("https://www.commcarehq.org/a/")
+    private val retrofit = Retrofit.Builder().baseUrl("https://www.commcarehq.org/")
         .addConverterFactory(MoshiConverterFactory.create()).build()
 
-    val apps = retrofit.create(CommCareService::class.java)
+    val api = retrofit.create(CommCareService::class.java)
 }

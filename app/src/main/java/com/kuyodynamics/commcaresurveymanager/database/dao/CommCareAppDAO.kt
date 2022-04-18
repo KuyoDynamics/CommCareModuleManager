@@ -24,5 +24,5 @@ interface CommCareAppDAO {
     fun clear()
 
     @Query("SELECT * FROM commcare_app ORDER BY name DESC")
-    fun getAllApps(): LiveData<List<CommCareApp>>
+    fun getAll(): LiveData<List<CommCareApp>>
 }

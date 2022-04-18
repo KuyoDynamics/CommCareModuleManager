@@ -67,6 +67,7 @@ data class NetworkCommCareApp(
 fun NetworkCommCareAppContainer.asDatabaseModelList(): List<CommCareApp> {
     return apps.objects.map {
         CommCareApp(
+            projectDomain = "dummy",
             appId = it.id,
             name = it.name,
             buildComment = it.build_comment,
