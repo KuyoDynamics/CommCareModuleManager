@@ -14,7 +14,8 @@
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="match_parent"
+            >
 
             <androidx.appcompat.widget.Toolbar
                 android:id="@+id/toolbar"
@@ -30,26 +31,28 @@
 
             <Spinner
                 android:id="@+id/project_spinner"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
                 android:layout_marginEnd="8dp"
-                android:contentDescription="@string/selected_project"
                 android:minHeight="48dp"
+                android:contentDescription="@string/selected_project"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintHorizontal_bias="0"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/toolbar"
-                tools:ignore="RedundantDescriptionCheck"
+                tools:ignore="RedundantDescriptionCheck,TouchTargetSizeCheck"
                 tools:layout_conversion_absoluteHeight="48dp"
                 tools:layout_conversion_absoluteWidth="0dp" />
 
+
             <Spinner
                 android:id="@+id/app_spinner"
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:contentDescription="@string/selected_app"
                 android:minHeight="48dp"
+                app:layout_constraintEnd_toStartOf="@id/toggleFavouriteApp"
                 app:layout_constraintStart_toStartOf="@+id/project_spinner"
                 app:layout_constraintTop_toBottomOf="@+id/project_spinner"
                 tools:ignore="RedundantDescriptionCheck"
@@ -58,22 +61,28 @@
 
             <ToggleButton
                 android:id="@+id/toggleFavouriteApp"
-                android:layout_width="48dp"
-                android:layout_height="48dp"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginEnd="8dp"
                 android:background="@drawable/toggle_app_favourite"
                 android:textOff=""
                 android:textOn=""
                 app:layout_constraintBottom_toBottomOf="@+id/app_spinner"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="1.0"
                 app:layout_constraintStart_toEndOf="@+id/app_spinner"
-                app:layout_constraintTop_toTopOf="@+id/app_spinner" />
+                app:layout_constraintTop_toTopOf="@+id/app_spinner"
+                tools:ignore="TouchTargetSizeCheck" />
             <!--            Divider-->
             <com.google.android.material.divider.MaterialDivider
                 android:id="@+id/header_divider"
-                android:layout_width="400dp"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="2dp"
+                android:layout_marginTop="8dp"
                 android:layout_marginEnd="8dp"
+                android:layout_marginStart="8dp"
                 android:layout_marginBottom="2dp"
+                app:dividerColor="@color/white"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="@+id/app_spinner"
                 app:layout_constraintTop_toBottomOf="@+id/app_spinner" />
@@ -145,9 +154,9 @@
                 android:maxLines="1"
                 android:text="@string/built_on"
                 app:backgroundTint="@color/material_on_primary_emphasis_high_type"
-                app:layout_constraintEnd_toStf="@+id/versionLabel"
                 app:layout_constraintStart_toEndOf="@+id/buildComment"
                 app:layout_constraintTop_toTopOf="@+id/buildComment"
+                app:layout_constraintEnd_toEndOf="@+id/header_divider"
                 tools:text="4873" />
 
             <TextView
@@ -159,6 +168,7 @@
                 android:textStyle="italic"
                 app:layout_constraintStart_toStartOf="@+id/version"
                 app:layout_constraintTop_toBottomOf="@+id/version"
+                app:layout_constraintEnd_toEndOf="@+id/header_divider"
                 app:tint="@color/material_on_primary_emphasis_high_type" />
 
 
