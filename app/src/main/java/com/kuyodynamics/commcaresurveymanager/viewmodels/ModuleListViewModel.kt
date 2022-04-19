@@ -1,4 +1,4 @@
-package com.kuyodynamics.commcaresurveymanager.commcare.modules
+package com.kuyodynamics.commcaresurveymanager.ui.commcare.modules
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData

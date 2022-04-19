@@ -1,4 +1,4 @@
-package com.kuyodynamics.commcaresurveymanager.commcare.modules
+package com.kuyodynamics.commcaresurveymanager.ui.commcare.modules
 
 import android.content.Context
 import android.os.Bundle
@@ -11,6 +11,7 @@ import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import com.kuyodynamics.commcaresurveymanager.R
 import com.kuyodynamics.commcaresurveymanager.databinding.FragmentModuleListBinding
+import com.kuyodynamics.commcaresurveymanager.util.ModuleListAdaptor
 import timber.log.Timber
 
 /**

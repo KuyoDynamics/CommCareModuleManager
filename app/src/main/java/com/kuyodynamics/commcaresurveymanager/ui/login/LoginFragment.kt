@@ -1,4 +1,4 @@
-package com.kuyodynamics.commcaresurveymanager.core.auth.ui.login
+package com.kuyodynamics.commcaresurveymanager.ui.login
 
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
@@ -14,6 +14,8 @@ import android.view.inputmethod.EditorInfo
 import android.widget.Toast
 import com.kuyodynamics.commcaresurveymanager.R
 import com.kuyodynamics.commcaresurveymanager.databinding.FragmentLoginBinding
+import com.kuyodynamics.commcaresurveymanager.viewmodels.LoginViewModel
+import com.kuyodynamics.commcaresurveymanager.viewmodels.LoginViewModelFactory
 
 class LoginFragment : Fragment() {
 

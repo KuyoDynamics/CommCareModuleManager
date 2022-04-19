@@ -1,7 +1,6 @@
-package com.kuyodynamics.commcaresurveymanager.core
+package com.kuyodynamics.commcaresurveymanager.ui
 
 import android.os.Bundle
-import timber.log.Timber
 import androidx.appcompat.app.AppCompatActivity
 import android.view.Menu
 import android.view.MenuItem

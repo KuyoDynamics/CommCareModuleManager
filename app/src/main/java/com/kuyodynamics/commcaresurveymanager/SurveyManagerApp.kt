@@ -1,9 +1,9 @@
-package com.kuyodynamics.commcaresurveymanager.core
+package com.kuyodynamics.commcaresurveymanager
 
 import android.app.Application
 import timber.log.Timber
 
-class MainApp: Application() {
+class SurveyManagerApp: Application() {
     override fun onCreate() {
         super.onCreate()
 

@@ -15,7 +15,7 @@
         android:paddingTop="@dimen/fragment_vertical_margin"
         android:paddingRight="@dimen/fragment_horizontal_margin"
         android:paddingBottom="@dimen/fragment_vertical_margin"
-        tools:context="com.kuyodynamics.commcaresurveymanager.core.auth.ui.login.LoginFragment">
+        tools:context="com.kuyodynamics.commcaresurveymanager.ui.login.LoginFragment">
 
         <EditText
             android:id="@+id/username"

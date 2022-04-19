@@ -34,3 +34,17 @@ data class Project(
     var domainName: String,
     var projectName: String
 )
+
+/**
+ * Data class that captures user information for logged in users retrieved from LoginRepository
+ */
+data class LoggedInUser(
+    val id: String,
+
+    val token: String,
+
+    var lastName: String,
+
+    var firstName: String,
+
+    )

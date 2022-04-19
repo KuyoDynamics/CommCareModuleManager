@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/FirstFragment"
-        android:name="com.kuyodynamics.commcaresurveymanager.commcare.modules.ModuleListFragment"
+        android:name="com.kuyodynamics.commcaresurveymanager.ui.commcare.modules.ModuleListFragment"
         android:label="@string/first_fragment_label"
         tools:layout="@layout/fragment_module_list"/>
 </navigation>

@@ -1,9 +1,9 @@
-package com.kuyodynamics.commcaresurveymanager.core.auth.ui.login
+package com.kuyodynamics.commcaresurveymanager.viewmodels
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
-import com.kuyodynamics.commcaresurveymanager.core.auth.data.LoginDataSource
-import com.kuyodynamics.commcaresurveymanager.core.auth.data.LoginRepository
+import com.kuyodynamics.commcaresurveymanager.ui.auth.data.LoginDataSource
+import com.kuyodynamics.commcaresurveymanager.repository.LoginRepo
 
 /**
  * ViewModel provider factory to instantiate LoginViewModel.
@@ -15,7 +15,7 @@ class LoginViewModelFactory : ViewModelProvider.Factory {
     override fun <T : ViewModel> create(modelClass: Class<T>): T {
         if (modelClass.isAssignableFrom(LoginViewModel::class.java)) {
             return LoginViewModel(
-                loginRepository = LoginRepository(
+                loginRepo = LoginRepo(
                     dataSource = LoginDataSource()
                 )
             ) as T

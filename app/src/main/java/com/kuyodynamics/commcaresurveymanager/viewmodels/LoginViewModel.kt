@@ -1,14 +1,17 @@
-package com.kuyodynamics.commcaresurveymanager.core.auth.ui.login
+package com.kuyodynamics.commcaresurveymanager.viewmodels
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import android.util.Patterns
 import com.kuyodynamics.commcaresurveymanager.R
-import com.kuyodynamics.commcaresurveymanager.core.auth.data.LoginRepository
-import com.kuyodynamics.commcaresurveymanager.core.auth.data.Result
+import com.kuyodynamics.commcaresurveymanager.repository.LoginRepo
+import com.kuyodynamics.commcaresurveymanager.ui.auth.data.Result
+import com.kuyodynamics.commcaresurveymanager.ui.login.LoggedInUserView
+import com.kuyodynamics.commcaresurveymanager.ui.login.LoginFormState
+import com.kuyodynamics.commcaresurveymanager.ui.login.LoginResult
 
-class LoginViewModel(private val loginRepository: LoginRepository) : ViewModel() {
+class LoginViewModel(private val loginRepo: LoginRepo) : ViewModel() {
 
     private val _loginForm = MutableLiveData<LoginFormState>()
     val loginFormState: LiveData<LoginFormState> = _loginForm
@@ -18,7 +21,7 @@ class LoginViewModel(private val loginRepository: LoginRepository) : ViewModel()
 
     fun login(username: String, password: String) {
         // can be launched in a separate asynchronous job
-        val result = loginRepository.login(username, password)
+        val result = loginRepo.login(username, password)
 
         if (result is Result.Success) {
             _loginResult.value =
