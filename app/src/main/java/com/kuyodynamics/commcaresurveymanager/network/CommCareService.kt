@@ -37,7 +37,7 @@ interface CommCareService {
      * Login to CommCare
      */
     @FormUrlEncoded
-    @POST("a/{domainName}/api/v0.5/sso")
+    @POST("a/{domainName}/api/v0.5/sso/")
     suspend fun singleSignOn(
         @Field("username") username: String,
         @Field("password") password: String,

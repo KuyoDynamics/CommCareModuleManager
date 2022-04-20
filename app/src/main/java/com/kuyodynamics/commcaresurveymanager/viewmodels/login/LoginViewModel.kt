@@ -1,15 +1,17 @@
-package com.kuyodynamics.commcaresurveymanager.viewmodels
+package com.kuyodynamics.commcaresurveymanager.viewmodels.login
 
+import android.util.Patterns
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
-import android.util.Patterns
+import androidx.lifecycle.viewModelScope
 import com.kuyodynamics.commcaresurveymanager.R
+import com.kuyodynamics.commcaresurveymanager.domain.LoggedInUser
 import com.kuyodynamics.commcaresurveymanager.repository.LoginRepo
-import com.kuyodynamics.commcaresurveymanager.ui.auth.data.Result
 import com.kuyodynamics.commcaresurveymanager.ui.login.LoggedInUserView
 import com.kuyodynamics.commcaresurveymanager.ui.login.LoginFormState
 import com.kuyodynamics.commcaresurveymanager.ui.login.LoginResult
+import kotlinx.coroutines.launch
 
 class LoginViewModel(private val loginRepo: LoginRepo) : ViewModel() {
 
@@ -19,16 +21,24 @@ class LoginViewModel(private val loginRepo: LoginRepo) : ViewModel() {
     private val _loginResult = MutableLiveData<LoginResult>()
     val loginResult: LiveData<LoginResult> = _loginResult
 
-    fun login(username: String, password: String) {
-        // can be launched in a separate asynchronous job
-        val result = loginRepo.login(username, password)
+    private val _user = MutableLiveData<LoggedInUser>()
 
-        if (result is Result.Success) {
-            _loginResult.value =
-                LoginResult(success = LoggedInUserView(displayName = result.data.displayName))
-        } else {
-            _loginResult.value = LoginResult(error = R.string.login_failed)
+    fun login(username: String, password: String, domainName: String) = viewModelScope.launch {
+        // can be launched in a separate asynchronous job
+        loginRepo.login(username, password, domainName)
+
+        // Since this is LiveData, we can do it like this
+        LoginResult(success = _user.value?.let { LoggedInUserView(displayName = it.firstName) }).also {
+
+            _loginResult.value = it
         }
+
+//        if (result is Result.Success) {
+//            _loginResult.value =
+//                LoginResult(success = LoggedInUserView(displayName = result.data.displayName))
+//        } else {
+//            _loginResult.value = LoginResult(error = R.string.login_failed)
+//        }
     }
 
     fun loginDataChanged(username: String, password: String) {

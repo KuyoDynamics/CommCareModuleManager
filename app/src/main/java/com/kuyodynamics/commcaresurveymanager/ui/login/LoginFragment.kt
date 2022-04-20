@@ -14,8 +14,8 @@ import android.view.inputmethod.EditorInfo
 import android.widget.Toast
 import com.kuyodynamics.commcaresurveymanager.R
 import com.kuyodynamics.commcaresurveymanager.databinding.FragmentLoginBinding
-import com.kuyodynamics.commcaresurveymanager.viewmodels.LoginViewModel
-import com.kuyodynamics.commcaresurveymanager.viewmodels.LoginViewModelFactory
+import com.kuyodynamics.commcaresurveymanager.viewmodels.login.LoginViewModel
+import com.kuyodynamics.commcaresurveymanager.viewmodels.login.LoginViewModelFactory
 
 class LoginFragment : Fragment() {
 
@@ -95,7 +95,8 @@ class LoginFragment : Fragment() {
             if (actionId == EditorInfo.IME_ACTION_DONE) {
                 loginViewModel.login(
                     usernameEditText.text.toString(),
-                    passwordEditText.text.toString()
+                    passwordEditText.text.toString(),
+                    "mira-rfms" // for now
                 )
             }
             false
@@ -105,7 +106,8 @@ class LoginFragment : Fragment() {
             loadingProgressBar.visibility = View.VISIBLE
             loginViewModel.login(
                 usernameEditText.text.toString(),
-                passwordEditText.text.toString()
+                passwordEditText.text.toString(),
+                "mira-rfms" // for now
             )
         }
     }
